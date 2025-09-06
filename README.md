@@ -17,3 +17,5 @@
 - threading
 - sys и os
 
+# Как работает
+![[Pasted image 20250906204846.png]]
