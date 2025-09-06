@@ -18,4 +18,5 @@
 - sys и os
 
 # Как работает
-![[Pasted image 20250906204846.png]]
+<img width="502" height="360" alt="image" src="https://github.com/user-attachments/assets/8d67b405-3e64-45eb-89ce-4ea5bbcb8989" />
+
