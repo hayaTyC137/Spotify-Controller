@@ -48,6 +48,9 @@ class GlobalHotkeys(object):
         self.action_cooldown = 0.3
 
     def _get_current_combination(self):
+        if not self.pressed_keys:  # Добавляем проверку на пустое множество
+            return None
+
         modifiers = []
         main_keys = []
 
@@ -130,15 +133,16 @@ class GlobalHotkeys(object):
     def on_key_release(self, key):
         self.pressed_keys.discard(key)
 
-        # Очищаем обработанные комбинации при отпускании любой клавиши
-        # Это позволяет повторно использовать ту же комбинацию
-        current_combo = self._get_current_combination()
-        if current_combo:
-            # Если текущая комбинация изменилась, очищаем processed_combinations
-            pass
-        else:
-            # Если больше нет активных комбинаций, очищаем все
+        # Если больше нет нажатых клавиш, очищаем все обработанные комбинации
+        if not self.pressed_keys:
             self.processed_combinations.clear()
+        else:
+            # Если остались нажатые клавиши, проверяем текущую комбинацию
+            current_combo = self._get_current_combination()
+            # Если текущая комбинация изменилась или стала None, очищаем
+            if not current_combo:
+                self.processed_combinations.clear()
+
 
     def start_listener(self):
         if self.listener is None or not self.listener.running:
@@ -156,4 +160,7 @@ class GlobalHotkeys(object):
     def update_binds(self, new_binds):
         """Метод для безопасного обновления биндов"""
         self.current_binds = new_binds.copy()
+        # Очищаем все состояния для корректной работы новых биндов
         self.processed_combinations.clear()
+        self.pressed_keys.clear()  # Очищаем нажатые клавиши
+        self.last_action_time.clear()  # Сбрасываем таймеры действий
