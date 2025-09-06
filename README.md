@@ -17,6 +17,27 @@
 - threading
 - sys и os
 
-# Как работает
+# Как выглядит
 <img width="502" height="360" alt="image" src="https://github.com/user-attachments/assets/8d67b405-3e64-45eb-89ce-4ea5bbcb8989" />
+
+
+# Version V1.0 💾
+The SpotifyController application works without connecting to the API and is a completely standalone application written in Python. The version is still under development and contains several bugs that will be fixed later. An example is the disabled module for obtaining information about the author of the tracks and the track itself. The entire application is written using a neural network to obtain information about what needs to be fixed. However, all the logic was written with an attempt to use the OOP principle. Any changes or modifications to the application are in your hands, and I would be happy if anyone wanted to rework it; the program is completely in the hands of the community.
+
+# Technologies ⚙️
+- Python 3.13
+
+# Libraries 📝
+- Standard Python library
+- win32api
+- win32con
+- win32gui
+- pynnput
+- psutil
+- pywin32
+- tkinter
+- time
+- threading
+- sys and os
+
 
