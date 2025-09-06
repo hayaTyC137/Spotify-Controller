@@ -1,40 +1,25 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-block_cipher = None
 
 a = Analysis(
     ['GUI.py'],
     pathex=[],
     binaries=[],
     datas=[('SpotifyLogoController.png', '.')],
-    hiddenimports=[
-        'psutil',
-        'psutil._psutil_windows',
-        'win32api',
-        'win32con',
-        'win32gui',
-        'pynput.keyboard._win32',
-        'pynput.mouse._win32',
-        'threading',
-        'time'
-    ],
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
-    win_no_prefer_redirects=False,
-    win_private_assemblies=False,
-    cipher=block_cipher,
     noarchive=False,
+    optimize=0,
 )
-
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+pyz = PYZ(a.pure)
 
 exe = EXE(
     pyz,
     a.scripts,
     a.binaries,
-    a.zipfiles,
     a.datas,
     [],
     name='SpotifyController',
@@ -50,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=['SpotifyLogoController.png'],
 )
