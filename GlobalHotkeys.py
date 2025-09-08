@@ -3,6 +3,7 @@ import time
 from pynput import keyboard
 
 
+
 special_map = {
     "!": "1",
     "@": "2",
@@ -43,9 +44,11 @@ class GlobalHotkeys(object):
         self.pressed_keys = set()
         self.listener = None
 
+        #Обработчик двойных нажатий
         self.processed_combinations = set()
         self.last_action_time = {}
         self.action_cooldown = 0.3
+
 
     def _get_current_combination(self):
         if not self.pressed_keys:  # Добавляем проверку на пустое множество

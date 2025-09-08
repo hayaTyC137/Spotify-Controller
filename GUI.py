@@ -5,6 +5,8 @@ from tkinter import ttk
 
 import SpotifyControllLogic
 from GlobalHotkeys import GlobalHotkeys# Импорт класса
+from TrayLogic import TrayManager
+import threading
 
 controller = SpotifyControllLogic.SpotifyController()
 
@@ -142,6 +144,9 @@ root.geometry("370x250")
 root.title("Spotify Controller")
 root.resizable(False, False)
 
+tray_manager = TrayManager(root)
+tray_manager.setup_Tray()
+
 try:
     # Для exe файла
     import sys
@@ -230,14 +235,16 @@ status_label = ttk.Label(main_Right_Frame, text="Готов к работе", fo
 status_label.pack(pady=2)
 
 def on_closing():
-    """Корректное закрытие приложения"""
     globalHotkeys.stop_listener()
-    root.destroy()
+    root.withdraw()
 
 # Quit
 quit_frame = ttk.Frame(main_Right_Frame)
 quit_frame.pack(fill="x", pady=2)
 ttk.Button(quit_frame, text="Quit", command=on_closing).pack()
+
+tray_thread = threading.Thread(target=tray_manager.run_Tray, daemon=True)
+tray_thread.start()
 
 # Привязываем клавиши
 root.bind('<KeyPress>', on_key_press)
