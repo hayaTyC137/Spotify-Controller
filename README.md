@@ -18,7 +18,19 @@
 - sys и os
 
 # Как выглядит
+- Для запуска программы, требуется зайти в папку dist, там находиться файл SpotifyController.exe
 <img width="502" height="360" alt="image" src="https://github.com/user-attachments/assets/8d67b405-3e64-45eb-89ce-4ea5bbcb8989" />
+- Можете сами скомпилировать exe файл
+
+# Как скомпилировать exe файл
+- В терминале пропишите путь к директории файле `cd путь `
+
+- Пропишите команду `pyinstaller SpotifyController.spec`
+
+- После введите команду для компилирования
+
+`pyinstaller --onefile --noconsole --name "SpotifyController" --add-data "SpotifyLogoController.png;." --hidden-import psutil --hidden-import psutil._psutil_windows --hidden-import win32api --hidden-import win32con --hidden-import win32gui --hidden-import pynput.keyboard._win32 GUI.py`
+
 
 
 # Version V1.0 💾
@@ -40,4 +52,13 @@ The SpotifyController application works without connecting to the API and is a c
 - threading
 - sys and os
 
+# How to compile an exe file
+
+- In the terminal, enter the path to the file directory `cd path`
+
+- Enter the command `pyinstaller SpotifyController.spec`
+
+- Then enter the command to compile
+
+`pyinstaller --onefile --noconsole --name “SpotifyController” --add-data “SpotifyLogoController.png;.” --hidden-import psutil --hidden-import psutil._psutil_windows --hidden-import win32api --hidden-import win32con --hidden-import win32gui --hidden-import pynput.keyboard._win32 GUI.py`
 
