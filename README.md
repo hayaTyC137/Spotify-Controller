@@ -20,6 +20,7 @@
 # Как выглядит
 - Для запуска программы, требуется зайти в папку dist, там находиться файл SpotifyController.exe
 <img width="502" height="360" alt="image" src="https://github.com/user-attachments/assets/8d67b405-3e64-45eb-89ce-4ea5bbcb8989" />
+
 - Можете сами скомпилировать exe файл
 
 # Как скомпилировать exe файл
