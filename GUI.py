@@ -1,3 +1,5 @@
+import os
+import sys
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
@@ -146,6 +148,7 @@ root.resizable(False, False)
 
 tray_manager = TrayManager(root)
 tray_manager.setup_Tray()
+
 
 try:
     # Для exe файла

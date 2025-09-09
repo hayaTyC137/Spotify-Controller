@@ -1,11 +1,30 @@
+import os
+import sys
+
 import pystray
 from pystray import MenuItem, Menu
 from PIL import Image
 
 import SpotifyControllLogic
 
+
 def create_Tray_icon():
-    return Image.open("SpotifyLogoController.png")
+    try:
+        # Определяем базовый путь для ресурсов
+        if getattr(sys, 'frozen', False):
+            # Если запущено из exe файла
+            base_path = sys._MEIPASS
+        else:
+            # Если запущено из исходного кода
+            base_path = os.path.dirname(__file__)
+
+        icon_path = os.path.join(base_path, "SpotifyLogoController.png")
+        return Image.open(icon_path)
+
+    except (FileNotFoundError, Exception) as e:
+        print(f"Icon file not found: {e}")
+        # Создаем простую иконку по умолчанию, если файл не найден
+        return Image.new('RGB', (64, 64), color='green')
 
 
 def quit_tray(icon, item):
@@ -43,6 +62,3 @@ class TrayManager:
     def run_Tray(self):
         if self.tray_icon:
             self.tray_icon.run()
-
-
-
