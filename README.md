@@ -28,11 +28,6 @@
 
 - Пропишите команду `pyinstaller SpotifyController.spec`
 
-- После введите команду для компилирования
-
-`pyinstaller --onefile --noconsole --name "SpotifyController" --add-data "SpotifyLogoController.png;." --hidden-import psutil --hidden-import psutil._psutil_windows --hidden-import win32api --hidden-import win32con --hidden-import win32gui --hidden-import pynput.keyboard._win32 GUI.py`
-
-
 
 # Version V1.0 💾
 The SpotifyController application works without connecting to the API and is a completely standalone application written in Python. The version is still under development and contains several bugs that will be fixed later. An example is the disabled module for obtaining information about the author of the tracks and the track itself. The entire application is written using a neural network to obtain information about what needs to be fixed. However, all the logic was written with an attempt to use the OOP principle. Any changes or modifications to the application are in your hands, and I would be happy if anyone wanted to rework it; the program is completely in the hands of the community.
@@ -58,8 +53,3 @@ The SpotifyController application works without connecting to the API and is a c
 - In the terminal, enter the path to the file directory `cd path`
 
 - Enter the command `pyinstaller SpotifyController.spec`
-
-- Then enter the command to compile
-
-`pyinstaller --onefile --noconsole --name “SpotifyController” --add-data “SpotifyLogoController.png;.” --hidden-import psutil --hidden-import psutil._psutil_windows --hidden-import win32api --hidden-import win32con --hidden-import win32gui --hidden-import pynput.keyboard._win32 GUI.py`
-
