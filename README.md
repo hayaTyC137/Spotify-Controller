@@ -1,5 +1,6 @@
 # Версия V1.0 💾
 Приложение SpotifyController, работает без API подключения, полностью оффлайн приложение написанное на python. Версия пока сыровата, есть несколько багов, которые будут фиксится позже. Примером служит не подключенный модуль по получению информации об авторе треков и самого трека. Все приложение написано, с использованием нейросети для получении информации как что фиксить. Однако вся логика писалась с попыткой использования принципа ООП. Любое изменение или модификация приложения в ваших руках, я ток рад если кто-то захочет переделать, программа полностью в руках комьюнити.
+ФАЙЛ НАХОДИТЬСЯ В ПАПКЕ DIST
 
 # Технологии ⚙️
 - Python 3.13
@@ -31,6 +32,7 @@
 
 # Version V1.0 💾
 The SpotifyController application works without connecting to the API and is a completely standalone application written in Python. The version is still under development and contains several bugs that will be fixed later. An example is the disabled module for obtaining information about the author of the tracks and the track itself. The entire application is written using a neural network to obtain information about what needs to be fixed. However, all the logic was written with an attempt to use the OOP principle. Any changes or modifications to the application are in your hands, and I would be happy if anyone wanted to rework it; the program is completely in the hands of the community.
+THE FILE IS LOCATED IN THE DIST FOLDER.
 
 # Technologies ⚙️
 - Python 3.13
