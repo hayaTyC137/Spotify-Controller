@@ -1,16 +1,21 @@
-import os
-import sys
+
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
+import threading
+import argparse
 
 
 import SpotifyControllLogic
 from GlobalHotkeys import GlobalHotkeys# Импорт класса
 from TrayLogic import TrayManager
-import threading
-
+from AutoStartManager import AutostartManager
 controller = SpotifyControllLogic.SpotifyController()
+
+# Парсинг аргументов командной строки
+parser = argparse.ArgumentParser()
+parser.add_argument('--minimized', action='store_true', help='Запуск в свернутом виде')
+args = parser.parse_args()
 
 "Горячие клавиши"
 play_key = "Не установлено"
@@ -142,9 +147,14 @@ globalHotkeys = GlobalHotkeys(controller, current_binds)
 globalHotkeys.start_listener()
 "Главный фрейм"
 root = Tk()
-root.geometry("370x250")
+root.geometry("370x270")
 root.title("Spotify Controller")
 root.resizable(False, False)
+
+if args.minimized:
+    root.withdraw()
+else:
+    pass
 
 tray_manager = TrayManager(root)
 tray_manager.setup_Tray()
@@ -236,6 +246,30 @@ artist_label.pack(pady=1)
 #Статус
 status_label = ttk.Label(main_Right_Frame, text="Готов к работе", font=("Arial", 9), foreground="green")
 status_label.pack(pady=2)
+
+autostart_manager = AutostartManager()
+autostart_var = tk.BooleanVar()
+autostart_var.set(autostart_manager.is_autostart_enabled())
+
+def toggle_autostart():
+    if autostart_var.get():
+        if autostart_manager.enable_autostart():
+            status_label.config(text="Автозапск включен", foreground="green")
+        else:
+            status_label.config(text="Ошибка включения автозапуска", foreground="red")
+            autostart_var.set(False)
+    else:
+        if autostart_manager.disable_autostart():
+            status_label.config(text="Автозапуск выключен", foreground="blue")
+        else:
+            status_label.config(text="Ошибка отключения автозапуска", foreground="red")
+            autostart_var.set(True)
+
+autostart_check = ttk.Checkbutton(main_Right_Frame, text="Автозапуск с Windows",
+                                 variable=autostart_var,
+                                 command=toggle_autostart)
+autostart_check.pack(pady=2)
+
 
 def on_closing():
     globalHotkeys.stop_listener()

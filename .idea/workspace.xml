@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a2e93c4-d777-4c4d-b5d1-dee2c32adabb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SpotifyController.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SpotifyController.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutoStartManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpotifyController.spec" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyController.spec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrayLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrayLogic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/SpotifyController.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/SpotifyController.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +69,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\egorf\PycharmProjects\PythonProject3" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\egorf\PycharmProjects\PythonProject3" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -112,7 +112,12 @@
       <workItem from="1757363824415" duration="187000" />
       <workItem from="1757364033744" duration="520000" />
       <workItem from="1757410860469" duration="3719000" />
-      <workItem from="1757442362801" duration="305000" />
+      <workItem from="1757442362801" duration="1283000" />
+      <workItem from="1757935106178" duration="3381000" />
+      <workItem from="1758042818167" duration="166000" />
+      <workItem from="1758043163771" duration="59000" />
+      <workItem from="1758043380198" duration="236000" />
+      <workItem from="1758043783794" duration="423000" />
     </task>
     <servers />
   </component>
@@ -128,7 +133,7 @@
     <SUITE FILE_PATH="coverage/SpotifyController$s.coverage" NAME="s Coverage Results" MODIFIED="1757363526438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SpotifyController$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1757363315228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonProject3$SpotifyControllLogic.coverage" NAME="SpotifyControllLogic Coverage Results" MODIFIED="1756898264538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PythonProject3$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1757364170586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonProject3$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1758043198907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PythonProject3$df.coverage" NAME="df Coverage Results" MODIFIED="1756389497263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
