@@ -1,6 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
-
-
+# Файл с зависимостями для сборки exe файла
 a = Analysis(
     ['GUI.py'],
     pathex=[],

@@ -5,11 +5,10 @@ from tkinter import ttk
 import threading
 import argparse
 
-
-import SpotifyControllLogic
-from GlobalHotkeys import GlobalHotkeys# Импорт класса
-from TrayLogic import TrayManager
-from AutoStartManager import AutostartManager
+from Logic import SpotifyControllLogic
+from Logic.GlobalHotkeysLogic import GlobalHotkeys# Импорт класса
+from Logic.TrayLogic import TrayManager
+from Logic.AutoStartManagerLogic import AutostartManager
 controller = SpotifyControllLogic.SpotifyController()
 
 # Парсинг аргументов командной строки
